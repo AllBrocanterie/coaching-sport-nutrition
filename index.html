@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coaching Sport & Nutrition Personnalisé</title>
+  <meta name="description" content="Coaching sportif et nutrition personnalisé pour prendre soin de votre corps : perte de poids, remise en forme, mobilité, mieux manger.">
+  <style>
+    /* --------- STYLE GLOBAL --------- */
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    /* --------- HEADER --------- */
+    header {
+      padding: 1.2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      background: #22c55e;
+      color: #052e16;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: #16a34a;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.35);
+    }
+
+    /* --------- HERO --------- */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+      padding: 2rem 0 3rem;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid #22c55e44;
+      font-size: 0.8rem;
+      background: rgba(34, 197, 94, 0.08);
+      margin-bottom: 0.9rem;
+      color: #bbf7d0;
+    }
+
+    .hero-title {
+      font-size: 2.3rem;
+      line-height: 1.1;
+      margin: 0 0 0.8rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: #cbd5f5;
+      margin: 0 0 1.5rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.8rem;
+      font-size: 0.95rem;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-list li::before {
+      content: "✔";
+      color: #22c55e;
+      margin-top: 0.1rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-secondary {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-top: 0.7rem;
+    }
+
+    .hero-right {
+      background: radial-gradient(circle at top, #22c55e33, #020617 60%);
+      border-radius: 1.5rem;
+      padding: 1.4rem;
+      border: 1px solid #1f2937;
+      min-height: 260px;
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #22c55e55;
+      font-size: 0.75rem;
+      background: rgba(15, 23, 42, 0.9);
+      margin-bottom: 1rem;
+    }
+
+    .before-after-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 1rem;
+      padding: 1rem;
+      border: 1px solid #1f2937;
+      font-size: 0.85rem;
+    }
+
+    .card h3 {
+      margin: 0 0 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    .card small {
+      color: #9ca3af;
+    }
+
+    .chip {
+      display: inline-block;
+      margin-top: 0.4rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #4b5563;
+      font-size: 0.7rem;
+      color: #e5e7eb;
+    }
+
+    /* --------- SECTIONS --------- */
+    section {
+      margin: 3rem 0;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin: 0 0 0.7rem;
+    }
+
+    section p {
+      margin: 0.3rem 0 0.7rem;
+      font-size: 0.95rem;
+      color: #d1d5db;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.3rem;
+      margin-top: 1.5rem;
+    }
+
+    .step {
+      background: #020617;
+      border-radius: 1rem;
+      border: 1px solid #1f2937;
+      padding: 1.1rem;
+      font-size: 0.9rem;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      border: 1px solid #22c55e77;
+      background: #22c55e22;
+      font-size: 0.8rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* --------- FORMULAIRE --------- */
+    .form-section {
+      background: #020617;
+      border-radius: 1.5rem;
+      border: 1px solid #1f2937;
+      padding: 1.5rem;
+    }
+
+    .form-section p {
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 0.75rem;
+      background: #0b1120;
+    }
+
+    /* --------- FOOTER --------- */
+    footer {
+      border-top: 1px solid #1f2937;
+      padding: 1.4rem 0;
+      font-size: 0.8rem;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    /* --------- RESPONSIVE --------- */
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero-title {
+        font-size: 1.9rem;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header .btn {
+        align-self: stretch;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <header>
+      <h1>Coaching Sport & Nutrition</h1>
+      <a href="#formulaire" class="btn">Remplir le questionnaire</a>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="hero-tag">
+            🌱 Coaching personnalisé – 18 à 70+ ans
+          </div>
+          <h2 class="hero-title">
+            Prends soin de ton corps,<br>sans régimes extrêmes ni salle obligatoire.
+          </h2>
+          <p class="hero-subtitle">
+            Un accompagnement sur mesure : mouvement, nutrition simple et habitudes de vie,
+            adapté à ton âge, ton niveau, tes douleurs et ton quotidien.
+          </p>
+          <ul class="hero-list">
+            <li>Perte de poids durable, sans frustration permanente.</li>
+            <li>Remise en forme, entretien, mobilité, bien vieillir.</li>
+            <li>Conseils nutrition + exemples de plats adaptés à ton profil.</li>
+          </ul>
+          <a href="#formulaire" class="btn">Commencer le questionnaire</a>
+          <p class="hero-secondary">
+            Tu remplis le formulaire, je construis un plan 100% personnalisé à partir de tes réponses.
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <div class="badge">Accompagnement 1:1 à distance</div>
+          <div class="before-after-grid">
+            <div class="card">
+              <h3>Avant</h3>
+              <small>Fatigue, peu d’activité, douleurs de dos.</small><br>
+              <span class="chip">+8 kg en 5 ans</span>
+            </div>
+            <div class="card">
+              <h3>Après</h3>
+              <small>-6 kg en 4 mois, plus d’énergie, marche quotidienne.</small><br>
+              <span class="chip">Programme sur mesure</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMMENT ÇA MARCHE -->
+      <section>
+        <h2>Comment ça se passe concrètement ?</h2>
+        <p>Je m’adapte à toutes les situations : débutant complet, reprise, 50+, surpoids, manque de temps…</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Bilan via le questionnaire</h3>
+            <p>
+              Tu remplis un formulaire détaillé : âge, niveau, douleurs, objectifs, habitudes
+              alimentaires, contraintes de temps, etc. Plus tu es précis, plus le plan sera adapté.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Plan personnalisé</h3>
+            <p>
+              Je crée un plan sur mesure : séances, fréquence, intensité, conseils nutrition
+              et exemples de plats selon ton objectif (perte de poids, prise de muscle, entretien,
+              mobilité, mieux manger…).
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Suivi & ajustements</h3>
+            <p>
+              On échange régulièrement pour ajuster en fonction de tes progrès, de tes préférences
+              et de ta vie réelle (boulot, famille, imprévus). L’idée : que ce soit tenable sur
+              le long terme.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMULAIRE -->
+      <section id="formulaire" class="form-section">
+        <h2>Questionnaire de départ</h2>
+        <p>
+          Merci de prendre quelques minutes pour répondre à ce questionnaire. Toutes tes réponses
+          restent confidentielles et me servent uniquement à personnaliser ton accompagnement.
+        </p>
+
+        <!-- 🔻🔻🔻 REMPLACE ICI LE SRC PAR CELUI DE TON GOOGLE FORM 🔻🔻🔻 -->
+        <iframe
+          src="https://docs.google.com/forms/d/TON_ID_DE_FORMULAIRE/viewform?embedded=true"
+          height="1500"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >
+          Chargement…
+        </iframe>
+        <!-- 🔺🔺🔺 FIN DU GOOGLE FORM 🔺🔺🔺 -->
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Coaching Sport & Nutrition – Tous droits réservés.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
