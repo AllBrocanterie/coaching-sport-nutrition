@@ -4,14 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coaching Sport & Nutrition Personnalisé</title>
-  <meta name="description" content="Coaching sportif et nutrition personnalisé pour prendre soin de votre corps : perte de poids, remise en forme, mobilité, mieux manger.">
+  <meta name="description" content="Coaching sportif et nutrition personnalisé pour prendre soin de votre corps : perte de poids, remise en forme, mobilité, mieux manger, à tout âge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     /* --------- STYLE GLOBAL --------- */
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #0f172a;
       color: #e5e7eb;
     }
@@ -24,7 +27,7 @@
       padding: 1.5rem;
     }
 
-    /* --------- HEADER --------- */
+    /* --------- HEADER + MENU --------- */
     header {
       padding: 1.2rem 0;
       display: flex;
@@ -35,8 +38,27 @@
 
     header h1 {
       margin: 0;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: 700;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .main-nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .main-nav a:hover {
+      background: #111827;
+      color: #a5b4fc;
     }
 
     .btn {
@@ -171,7 +193,7 @@
       color: #e5e7eb;
     }
 
-    /* --------- SECTIONS --------- */
+    /* --------- SECTIONS GLOBALES --------- */
     section {
       margin: 3rem 0;
     }
@@ -215,6 +237,116 @@
       margin-bottom: 0.4rem;
     }
 
+    /* --------- PRICING OFFRE 2 --------- */
+    .pricing {
+      background: #020617;
+      border-radius: 1.5rem;
+      border: 1px solid #1f2937;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .pricing-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .pricing-title {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    .pricing-subtitle {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin: 0;
+    }
+
+    .pricing-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #22c55e55;
+      background: rgba(34,197,94,0.08);
+      font-size: 0.8rem;
+      color: #bbf7d0;
+      margin-bottom: 0.5rem;
+    }
+
+    .price-line {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin: 0.8rem 0 0.5rem;
+    }
+
+    .price-main {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #bbf7d0;
+    }
+
+    .price-main span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #a7f3d0;
+    }
+
+    .price-detail {
+      font-size: 0.9rem;
+      color: #d1d5db;
+    }
+
+    .pricing-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    .pricing-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-list li::before {
+      content: "•";
+      color: #22c55e;
+      margin-top: 0.15rem;
+    }
+
+    .whatsapp-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: #022c22;
+      color: #bbf7d0;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      border: 1px solid #16a34a;
+    }
+
+    .whatsapp-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34,197,94,0.8);
+    }
+
+    .pricing-note {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 0.8rem;
+    }
+
     /* --------- FORMULAIRE --------- */
     .form-section {
       background: #020617;
@@ -235,6 +367,33 @@
       background: #0b1120;
     }
 
+    /* --------- AVIS / A PROPOS --------- */
+    .avis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.3rem;
+      margin-top: 1.2rem;
+    }
+
+    .avis-card {
+      background: #020617;
+      border-radius: 1rem;
+      border: 1px solid #1f2937;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .avis-name {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .avis-tag {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-bottom: 0.6rem;
+    }
+
     /* --------- FOOTER --------- */
     footer {
       border-top: 1px solid #1f2937;
@@ -247,34 +406,39 @@
 
     /* --------- RESPONSIVE --------- */
     @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav {
+        flex-wrap: wrap;
+      }
       .hero {
         grid-template-columns: 1fr;
       }
       .hero-title {
         font-size: 1.9rem;
       }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      header .btn {
-        align-self: stretch;
-        text-align: center;
-      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- HEADER -->
+    <!-- HEADER + MENU -->
     <header>
       <h1>Coaching Sport & Nutrition</h1>
-      <a href="#formulaire" class="btn">Remplir le questionnaire</a>
+      <nav class="main-nav">
+        <a href="#top">Accueil</a>
+        <a href="#coaching">Le coaching</a>
+        <a href="#offre-2">Offres & tarifs</a>
+        <a href="#avis">Avis</a>
+        <a href="#formulaire">Questionnaire</a>
+      </nav>
     </header>
 
     <main>
       <!-- HERO -->
-      <section class="hero">
+      <section id="top" class="hero">
         <div>
           <div class="hero-tag">
             🌱 Coaching personnalisé – 18 à 70+ ans
@@ -314,10 +478,10 @@
         </div>
       </section>
 
-      <!-- COMMENT ÇA MARCHE -->
-      <section>
-        <h2>Comment ça se passe concrètement ?</h2>
-        <p>Je m’adapte à toutes les situations : débutant complet, reprise, 50+, surpoids, manque de temps…</p>
+      <!-- COMMENT ÇA MARCHE / LE COACHING -->
+      <section id="coaching">
+        <h2>Le coaching, concrètement</h2>
+        <p>Je m’adapte à toutes les situations : débutant complet, reprise, 50+, surpoids, manque de temps, douleurs…</p>
         <div class="steps">
           <div class="step">
             <div class="step-number">1</div>
@@ -348,6 +512,90 @@
         </div>
       </section>
 
+      <!-- OFFRE 2 : ABONNEMENT -->
+      <section id="offre-2" class="pricing">
+        <div class="pricing-header">
+          <span class="pricing-pill">Offre 2 – Coaching continu</span>
+          <h2 class="pricing-title">Abonnement mensuel – Sport & Nutrition</h2>
+          <p class="pricing-subtitle">
+            Un suivi sur la durée : programme ajusté en fonction de ta vie réelle, conseils nutrition
+            personnalisés, et un coach disponible à n’importe quel moment sur WhatsApp pour répondre à tes questions.
+          </p>
+        </div>
+
+        <div class="price-line">
+          <div class="price-main">119 €<span>/ mois</span></div>
+        </div>
+        <p class="price-detail">
+          Paiement des <strong>3 premiers mois d’avance</strong> (soit 357 € au départ),
+          puis <strong>119 €/mois</strong> tant que tu souhaites continuer l’accompagnement.
+          Cela représente environ <strong>27,50 € par semaine</strong>, soit
+          environ <strong>3,90 € par jour</strong>.
+        </p>
+
+        <ul class="pricing-list">
+          <li>Analyse complète de ton questionnaire + bilan de départ.</li>
+          <li>Programme de sport 100% personnalisé, adapté à ton niveau, ton âge, tes douleurs et ton matériel.</li>
+          <li>Conseils nutrition simples et concrets, avec des exemples de journées et de plats réalistes pour toi.</li>
+          <li>Ajustements réguliers du programme en fonction de tes progrès, de ta fatigue, de ton emploi du temps.</li>
+          <li>Prise en compte de ta réalité : travail, famille, imprévus, vacances… on adapte, on ne culpabilise pas.</li>
+        </ul>
+
+        <div class="whatsapp-tag">
+          <span class="whatsapp-dot"></span>
+          <span>
+            Disponible sur WhatsApp <strong>à n’importe quel moment</strong> pour tes questions,
+            tes retours et tes doutes. Tu peux m’écrire dès que tu en ressens le besoin : tu n’es jamais seul(e)
+            entre deux ajustements.
+          </span>
+        </div>
+
+        <p class="pricing-note">
+          Après avoir rempli le questionnaire ci-dessous, je vérifie que cette formule est bien adaptée à ton profil
+          (objectif, santé, contraintes), puis je te propose un point de départ clair. Aucun engagement au-delà des 3 premiers mois :
+          tu peux arrêter ensuite avant la prochaine échéance mensuelle.
+        </p>
+
+        <a href="#formulaire" class="btn" style="margin-top:1rem; display:inline-block;">
+          Remplir le questionnaire pour cette offre
+        </a>
+      </section>
+
+      <!-- AVIS -->
+      <section id="avis">
+        <h2>Avis & résultats</h2>
+        <p>Quelques exemples de profils accompagnés (avis anonymisés) :</p>
+        <div class="avis-grid">
+          <div class="avis-card">
+            <div class="avis-name">C., 42 ans</div>
+            <div class="avis-tag">Mère de 2 enfants, travail assis, douleurs de dos</div>
+            <p>
+              « On a commencé doucement avec 2 séances par semaine à la maison. En 4 mois,
+              j’ai perdu 6 kg, je dors mieux et j’ai beaucoup moins mal au dos. Le fait de pouvoir
+              écrire sur WhatsApp dès que je doute m’aide à rester régulière. »
+            </p>
+          </div>
+          <div class="avis-card">
+            <div class="avis-name">M., 55 ans</div>
+            <div class="avis-tag">Reprise du sport, objectif santé & énergie</div>
+            <p>
+              « Je n’avais pas fait de sport depuis des années. Tout a été adapté à mon niveau
+              et à mes genoux. On a travaillé la marche, la force et la mobilité. Je me sens
+              plus léger et plus confiant dans mon corps. »
+            </p>
+          </div>
+          <div class="avis-card">
+            <div class="avis-name">A., 27 ans</div>
+            <div class="avis-tag">Job prenant, envie de s’affiner sans passer sa vie en salle</div>
+            <p>
+              « On a construit un programme rapide mais efficace, + un cadre alimentaire
+              simple. Ce que j’adore : je peux envoyer mes questions ou mes doutes en direct
+              et j’ai une réponse. Ça change tout par rapport aux programmes tout faits. »
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!-- FORMULAIRE -->
       <section id="formulaire" class="form-section">
         <h2>Questionnaire de départ</h2>
@@ -356,13 +604,14 @@
           restent confidentielles et me servent uniquement à personnaliser ton accompagnement.
         </p>
 
-        <!-- 🔻🔻🔻 REMPLACE ICI LE SRC PAR CELUI DE TON GOOGLE FORM 🔻🔻🔻 -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZQkBlSfWQl2i7sBUJ2UaJ9nSnpsAMIWjsMkjNMU6UbOAUgg/viewform?embedded=true" 
-          width="100%" 
-          height="2034" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0">
+        <!-- 🔻🔻🔻 GOOGLE FORM 🔻🔻🔻 -->
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdZQkBlSfWQl2i7sBUJ2UaJ9nSnpsAMIWjsMkjNMU6UbOAUgg/viewform?embedded=true"
+          height="1800"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >
           Chargement…
         </iframe>
         <!-- 🔺🔺🔺 FIN DU GOOGLE FORM 🔺🔺🔺 -->
@@ -379,3 +628,4 @@
   </script>
 </body>
 </html>
+
