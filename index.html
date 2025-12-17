@@ -457,6 +457,11 @@
 }
     /* --------- RESPONSIVE --------- */
     @media (max-width: 800px) {
+      body {
+        /* Le mode fixed masque parfois l'image sur mobile (notamment iOS). */
+        background-attachment: scroll;
+        background-position: center top;
+      }
       header {
         flex-direction: column;
         align-items: flex-start;
