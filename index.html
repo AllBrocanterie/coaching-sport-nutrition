@@ -58,9 +58,21 @@
       gap: 1rem;
     }
 
+    .header-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      align-items: flex-start;
+    }
+
+    .brand-logo {
+      height: 54px;
+      width: auto;
+    }
+
     header h1 {
       margin: 0;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700;
     }
 
@@ -496,18 +508,21 @@
   <div class="container">
     <!-- HEADER + MENU -->
     <header>
-  <h1>Coaching Sport & Nutrition</h1>
-  <nav class="main-nav">
-    <a href="#top">Accueil</a>
-    <a href="#coaching">Le coaching</a>
-    <a href="#pour-qui">Pour qui ?</a>
-    <a href="#offre-2">Offres & tarifs</a>
-    <a href="#a-propos">À propos</a>
-    <a href="#avis">Avis</a>
-    <a href="#formulaire">Questionnaire</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+      <div class="header-brand">
+        <img src="logo sport.png" alt="Logo Coaching Sport & Nutrition" class="brand-logo">
+        <h1>Coaching Sport & Nutrition</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="#top">Accueil</a>
+        <a href="#coaching">Le coaching</a>
+        <a href="#pour-qui">Pour qui ?</a>
+        <a href="#offre-2">Offres & tarifs</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#avis">Avis</a>
+        <a href="#formulaire">Questionnaire</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
     <main>
       <!-- HERO -->
