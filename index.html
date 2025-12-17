@@ -12,19 +12,19 @@
     /* --------- STYLE GLOBAL --------- */
     * { box-sizing: border-box; }
 
-  body {
+body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #e5e7eb;
 
-  /* Image de fond + filtre sombre pour garder la lisibilité */
+  /* Image de fond + filtre sombre */
   background-image:
     linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.96)),
-    url("fond site.jpg");
+    url("fond site.jpg?v=2");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* effet léger de parallaxe */
+  background-attachment: scroll; /* on enlève totalement le fixed pour être safe mobile */
 }
 
     a { color: inherit; text-decoration: none; }
@@ -457,16 +457,20 @@
 }
     /* --------- RESPONSIVE --------- */
 @media (max-width: 800px) {
-  body {
-    /* certains mobiles ignorent le fond “fixed”, on simplifie */
-    background-image:
-      linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.96)),
-      url("fond site.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll; /* important pour mobile */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
   }
+  .main-nav {
+    flex-wrap: wrap;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 1.9rem;
+  }
+}
 
   header {
     flex-direction: column;
