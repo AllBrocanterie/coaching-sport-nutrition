@@ -30,8 +30,15 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-attachment: scroll; /* compatible mobiles (fixed est souvent désactivé) */
-      background-position: center top;
+      background-attachment: fixed; /* effet léger de parallaxe */
+    }
+
+    /* iOS et certains navigateurs mobiles désactivent l'image quand l'attachment est "fixed" */
+    @media (max-width: 800px), (orientation: portrait) {
+      body {
+        background-attachment: scroll;
+        background-position: center top;
+      }
     }
 
     a { color: inherit; text-decoration: none; }
